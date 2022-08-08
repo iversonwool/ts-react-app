@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header'
+import LoadingHOC from './components/LoadingHOC'
 
 function App() {
   return (
     <div className="App">
 
-      <Header name='Lee Klaus' />
+      <LoadingHOC name='Lee Klaus' loading={false} />
     </div>
   );
 }
