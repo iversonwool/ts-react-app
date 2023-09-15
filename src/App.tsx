@@ -3,9 +3,12 @@ import './App.css';
 import LoadingHOC from './components/LoadingHOC'
 import {connect} from 'react-redux'
 import {increment, decrement,incrementAsync} from './redux/actions/count'
+import {NavLink, useRoutes} from 'react-router-dom'
+import routes from './router';
 
 
 function App(props: any) {
+  const element = useRoutes(routes)
   console.log(props)
   function increment() {
     props.increment(1)
@@ -32,6 +35,16 @@ function App(props: any) {
           return <li key={index}>{person.name}</li>
         })}
       </ul>
+
+
+
+      <div style={{border: '1px solid cyan'}}>
+        <NavLink to="/home" >Home</NavLink>
+        <NavLink to="/about" >About</NavLink>
+      </div>
+
+
+      {element}
     </div>
   );
 }
