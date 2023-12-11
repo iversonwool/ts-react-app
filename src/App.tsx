@@ -5,7 +5,7 @@ import {connect} from 'react-redux'
 import {increment, decrement,incrementAsync} from './redux/actions/count'
 import {NavLink, useRoutes} from 'react-router-dom'
 import routes from './router';
-
+import {createPortal} from 'react-dom'
 
 function App(props: any) {
   const element = useRoutes(routes)
@@ -45,6 +45,9 @@ function App(props: any) {
 
 
       {element}
+
+
+      {createPortal(<div>aaaa</div>, document.body)}
     </div>
   );
 }
