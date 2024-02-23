@@ -9,7 +9,7 @@ import {createPortal} from 'react-dom'
 
 function App(props: any) {
 
-  new URL('./src/index.css', import.meta.url)
+  // new URL('./src/index.css', import.meta.url)
   const element = useRoutes(routes)
   console.log(props)
   function increment() {
