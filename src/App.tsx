@@ -7,6 +7,10 @@ import {NavLink, useRoutes} from 'react-router-dom'
 import routes from './router';
 import {createPortal} from 'react-dom'
 
+import {getEnums} from './util/overload'
+getEnums('sass')
+getEnums(['sss', 'sss'])
+
 function App(props: any) {
 
   // new URL('./src/index.css', import.meta.url)
